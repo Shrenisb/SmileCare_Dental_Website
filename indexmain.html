@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="SmileCare Appointment Page">
+        <title>SmileCare Appointment Page</title>
+        <!-- Bootstrap CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <!-- Vue JS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<!-- My CSS File-->
+		<link rel="stylesheet" href="Design/css/style.css">
+    </head>
+    <body>
+        <!-- Contact & Appointment Section -->
+		<section class="contact-and-appointment" id="contact">
+			<div class="row" style="margin: 0px;">
+				<div class="col-md-6" style="padding: 0px;">
+					<div class="contact-left">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div style="text-align: center; margin-top: 190px; margin-left: 40px;">
+						<h1 style="color: #10217a;">
+							Contact & Appointment
+						</h1>
+						<h5 style="color: #080707;">
+							Stay connected with us and schedule your appointment!
+                        </h5>
+                    
+					</div>
+					<form action="" id="contact-form" @submit="checkForm" method="POST" style="padding: 30px; margin-left: 40px;">
+						<h6 style="color: #10217a;">
+                            Kindly provide appropriate information and we will reach out to you in no time!
+                        </h6>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control"  v-model="first_name" placeholder="First Name">
+									<div class="invalid-feedback" style="display: block;" v-if="first_name === null">
+										First Name Required!
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control"  v-model="last_name" placeholder="Last Name">
+									<div class="invalid-feedback" style="display: block;" v-if="last_name === null">
+										Last Name Required!
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" v-model="email" placeholder="Email Address">
+									<div class="invalid-feedback" style="display: block;" v-if="email === null">
+										Valid Email Required!
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="tel" class="form-control" placeholder="Phone Number" v-model="phone">
+									<div class="invalid-feedback" style="display: block;" v-if="phone === null">
+										Phone Is Required!
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<textarea class="form-control my-textarea" cols="10" rows="3" v-model = "message" style="resize: none;" placeholder="Please provide details about the problem you're experiencing."></textarea>
+							<div class="invalid-feedback" style="display: block;" v-if="message === null">
+								Message Is Required!
+							</div>
+						</div>
+						<p>
+							<input type="submit" value="Send Message." class="submit-bttn">
+						</p>
+					</form>
+						
+
+				</div>
+			</div>
+		</section>
+		<!-- VUE JS SCRIPT-->
+		<script src="Design/js/main.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
