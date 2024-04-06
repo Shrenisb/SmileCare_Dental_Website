@@ -5,14 +5,18 @@ const body = require('body-parser')
 const app = express()
 const { MongoClient } = require('mongodb')
 
-const handlebars = require("express-handlebars");
-//Sets our app to use the handlebars engine
-app.set("view engine", "handlebars");
-//Sets handlebars configurations (we will go through them later on)
-app.engine("handlebars", handlebars.engine({ defaultLayout: "main" }));
+app.use(express.static('.'));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json())
+app.use(express.json());
+
+app.get('/',(req,res) => {
+  res.sendFile('index.html')
+});
+
+app.get('/book.html',(req,res) => {
+  res.sendFile('book.html')
+});
 
 app.use(express.static('public', { setHeaders: (res, path) => {
   if (path.endsWith('.png')) {
