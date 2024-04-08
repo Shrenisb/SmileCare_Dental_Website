@@ -24,6 +24,10 @@ app.use(express.static('public', { setHeaders: (res, path) => {
   }
 }}));  
 
+app.get('/blog.html',(req,res) => {
+  res.sendFile('blog.html')
+});
+
 app.listen(3000, async () => {
     await connectDB();
     console.log(`http://localhost:3000`);
