@@ -1,7 +1,6 @@
 const express = require('express')
 const connectDB = require('./db') 
 const mongoose = require('mongoose')
-const body = require('body-parser')
 const app = express()
 const { MongoClient } = require('mongodb')
 const { Book } = require('./model')
