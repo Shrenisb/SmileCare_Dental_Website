@@ -4,11 +4,25 @@ const mongoose = require('mongoose')
 const body = require('body-parser')
 const app = express()
 const { MongoClient } = require('mongodb')
+const { Book } = require('./model')
 
 app.use(express.static('.'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.post('/insert.html',(req,res) => {
+  const Booking = new Book({
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: req.body.email,
+    phone: req.body.phone,
+    message: req.body.message
+  })
+  console.log(req.body)
+  Booking.save()
+  res.redirect('/book.html')
+})
 
 app.get('/',(req,res) => {
   res.sendFile('index.html')

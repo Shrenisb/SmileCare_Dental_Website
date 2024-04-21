@@ -31,14 +31,14 @@
                         </h5>
                     
 					</div>
-					<form action="" id="contact-form" @submit="checkForm" method="POST" style="padding: 30px; margin-left: 40px;">
+					<form action="insert.html" id="contact-form" @submit="checkForm" method="POST" style="padding: 30px; margin-left: 40px;">
 						<h6 style="color: #10217a;">
                             Kindly provide appropriate information and we will reach out to you in no time!
                         </h6>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control"  v-model="first_name" placeholder="First Name">
+									<input type="text" class="form-control" name="first_name" v-model="first_name" placeholder="First Name">
 									<div class="invalid-feedback" style="display: block;" v-if="first_name === null">
 										First Name Required!
 									</div>
@@ -46,7 +46,7 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control"  v-model="last_name" placeholder="Last Name">
+									<input type="text" class="form-control" name="last_name" v-model="last_name" placeholder="Last Name">
 									<div class="invalid-feedback" style="display: block;" v-if="last_name === null">
 										Last Name Required!
 									</div>
@@ -56,7 +56,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" v-model="email" placeholder="Email Address">
+									<input type="text" class="form-control" name="email" v-model="email" placeholder="Email Address">
 									<div class="invalid-feedback" style="display: block;" v-if="email === null">
 										Valid Email Required!
 									</div>
@@ -64,7 +64,7 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="tel" class="form-control" placeholder="Phone Number" v-model="phone">
+									<input type="tel" class="form-control" name="phone" placeholder="Phone Number" v-model="phone">
 									<div class="invalid-feedback" style="display: block;" v-if="phone === null">
 										Phone Is Required!
 									</div>
@@ -73,7 +73,7 @@
 						</div>
 						
 						<div class="form-group">
-							<textarea class="form-control my-textarea" cols="10" rows="3" v-model = "message" style="resize: none;" placeholder="Please provide details about the problem you're experiencing."></textarea>
+							<textarea class="form-control my-textarea" cols="10" name="message" rows="3" v-model = "message" style="resize: none;" placeholder="Please provide details about the problem you're experiencing."></textarea>
 							<div class="invalid-feedback" style="display: block;" v-if="message === null">
 								Message Is Required!
 							</div>
