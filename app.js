@@ -18,7 +18,7 @@ app.post('/insert.html',(req,res) => {
     phone: req.body.phone,
     message: req.body.message
   })
-  console.log(req.body)
+  //console.log(req.body)
   Booking.save()
   res.redirect('/book.html')
 })
