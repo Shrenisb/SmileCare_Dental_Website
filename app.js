@@ -41,6 +41,22 @@ app.get('/blog.html',(req,res) => {
   res.sendFile('blog.html')
 });
 
+app.get('/blog1.html',(req,res) => {
+  res.sendFile('blog1.html')
+});
+
+app.get('/blog2.html',(req,res) => {
+  res.sendFile('blog2.html')
+});
+
+app.get('/blog3.html',(req,res) => {
+  res.sendFile('blog3.html')
+});
+
+app.get('/blog4.html',(req,res) => {
+  res.sendFile('blog4.html')
+});
+
 app.listen(3000, async () => {
     await connectDB();
     console.log(`http://localhost:3000`);
