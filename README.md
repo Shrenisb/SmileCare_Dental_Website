@@ -13,9 +13,12 @@ Team Members of the Project:
    - https://www.linkedin.com/in/shreni-budhale-284369286/  
 3. Pratiksha Samal
    Profile Links:
-   - https://www.linkedin.com/in/adithya-venkat/
-   - https://github.com/Adithya-Venkat-dot
+   - https://www.linkedin.com/in/pratiksha-samal/
+   - https://github.com/pratikshasamal
 4. Vedant Shetty
+   Profile Links:
+   - https://www.linkedin.com/in/vedantshetty/
+   - https://github.com/vedantshetty27
 
 About:
 -----------------------------------------------------------------------------------------------------------------
