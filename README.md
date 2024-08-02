@@ -1,6 +1,6 @@
 # SmileCare_Dental_Website
 
-Link to documentation --> 
+Link to documentation --> https://drive.google.com/drive/folders/14tRJI3Dx-njDfFsYHFmXLeWucdfFaMK9?usp=sharing
 
 Team Members of the Project:
 1. Vasundhara Maheshwari
